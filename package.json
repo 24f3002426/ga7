@@ -1,0 +1,11 @@
+{
+  "name": "release-gate",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Deterministic GitHub Actions container release gate",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  }
+}
