@@ -151,9 +151,11 @@ const server = http.createServer((req, res) => {
   });
 });
 
-server.listen(PORT, () => {
-  console.log(`Release gate listening on port ${PORT}`);
-});
+if (require.main === module) {
+  server.listen(PORT, () => {
+    console.log(`Release gate listening on port ${PORT}`);
+  });
+}
 
 module.exports = {
   evaluateReleaseGate,
